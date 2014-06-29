@@ -12,7 +12,7 @@ process.stdin.on('keypress', function (ch, key) {
   var name = key ? key.name : null;
   if (name === 'space') {
     if (timeout) {
-      console.log('stop juggling (' + (new Date - startTime) / 1000 + 's total)');
+      console.log('stop juggling (' + (new Date() - startTime) / 1000 + 's total)');
       clearTimeout(timeout);
       timeout = null;
     } else {
