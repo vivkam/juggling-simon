@@ -27,7 +27,7 @@ process.stdin.on('keypress', function (ch, key) {
       timeout = setTimeout(function () {
         startTime = new Date();
         juggle();
-      }, 3000);
+      }, config.firstPatternDelay * 1000);
     }
   } else if (name === 'q') {
     process.stdin.pause();
