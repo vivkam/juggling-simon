@@ -66,12 +66,16 @@ function getPattern () {
       random.shuffle(patterns);
     }
     pattern = patterns.pop();
+    if (pattern === lastPattern) {
+      patterns.push(pattern);
+      pattern = patterns.shift();
+    }
   } else {
     pattern = random.pick(config.patterns);
     while (pattern === lastPattern) {
       pattern = random.pick(config.patterns);
     }
-    lastPattern = pattern;
   }
+  lastPattern = pattern;
   return pattern;
 }
