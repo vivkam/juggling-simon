@@ -14,13 +14,14 @@ process.stdin.on('keypress', function (ch, key) {
   if (name === 'space') {
     if (timeout) {
       clearTimeout(timeout);
-      timeout = null;
       if (startTime) {
         console.log('stop juggling (' + (new Date() - startTime) / 1000 + 's total)');
       } else {
         console.log('stop juggling');
       }
+      timeout = null;
       startTime = null;
+      patterns = null;
     } else {
       console.log('start juggling');
       timeout = setTimeout(function () {
