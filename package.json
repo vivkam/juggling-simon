@@ -1,0 +1,15 @@
+{
+  "name" : "juggling-simon",
+  "description" : "Audible juggling trick shuffler.",
+  "version" : "0.0.1",
+  "private" : true,
+  "author" : {
+    "name" : "Vivian Kam",
+    "email" : "otherviv@gmail.com"
+  },
+  "dependencies" : {
+    "keypress" : "0.2.1",
+    "player" : "0.1.8",
+    "random-js" : "1.0.4"
+  }
+}

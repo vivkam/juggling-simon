@@ -1,4 +1,18 @@
-juggling-simon
+Juggling Simon
 ==============
 
 Audible juggling trick shuffler.
+
+
+Configuration
+-------------
+
+1. See config.js.
+2. If you want to add a pattern you will need an audio file to match. 
+   The ones included are [Google Translate](https://translate.google.com/) downloads.
+
+
+Notes
+-----
+
+Because of Player this is not out-of-the-box Windows friendly.
