@@ -10,7 +10,7 @@ Configuration
 1. See config.js.
 2. If you want to add a pattern you will need an audio file to match. 
    The ones included are [Google Translate](https://translate.google.com/) downloads.
-
+   Open issue #2 addresses this.
 
 Notes
 -----
