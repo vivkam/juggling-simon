@@ -3,6 +3,7 @@ var Player = require('player')
   , Random = require('random-js')
   , random = Random()
   , config = require('./config')
+  , patterns
   , lastPattern
   , startTime
   , timeout;
@@ -52,10 +53,19 @@ function juggle () {
 }
 
 function getPattern () {
-  var pattern = random.pick(config.patterns);
-  while (pattern === lastPattern) {
+  var pattern;
+  if (config.completeBeforeRepeat) {
+    if (!patterns || patterns.length === 0) {
+      patterns = config.patterns.slice(0);
+      random.shuffle(patterns);
+    }
+    pattern = patterns.pop();
+  } else {
     pattern = random.pick(config.patterns);
+    while (pattern === lastPattern) {
+      pattern = random.pick(config.patterns);
+    }
+    lastPattern = pattern;
   }
-  lastPattern = pattern;
   return pattern;
 }
