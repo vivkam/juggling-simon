@@ -16,3 +16,9 @@ Notes
 -----
 
 Because of Player this is not out-of-the-box Windows friendly.
+
+
+Why Isn't This A Web App?
+-------------------------
+
+It should be.
